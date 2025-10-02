@@ -1,0 +1,72 @@
+Introduction
+ “Good [morning/afternoon] judges. Thank you for having us.
+We are here to introduce SautiCare — A Caring Voice for Mental Health.
+In Nigeria, millions silently struggle with stress, trauma, and anxiety. But stigma, high costs, and language barriers keep them from getting help.
+Our vision is simple but powerful. which is to use AI and local languages to make mental health support accessible, stigma-free, and culturally relevant.”
+
+The Problem
+ “Let’s start with the challenge we’re addressing.
+Across Nigeria, especially among youth and internally displaced persons, mental health struggles are growing. Yet services remain scarce: there are very few professionals, services are costly, and stigma makes people stay silent.
+Even when digital tools exist, they often ignore language. A young person in Maiduguri may prefer Hausa, or a university student might express themselves best in Pidgin, but most apps only support English.
+So, those who need help the most, are the ones left out.”
+
+Our Solution
+ “That’s where SautiCare comes in.
+SautiCare is an AI-powered chatbot that provides mental health first-aid in English, Pidgin, and Hausa.
+It offers a safe, stigma-free space where anyone can:
+•	Chat about how they feel.
+•	Receive empathetic, human-like responses.
+•	Learn coping strategies or access helpful resources.
+•	And, when it’s critical, get guided to professional helplines instantly.
+It’s lightweight, mobile-friendly, and built specifically for underserved communities.”
+
+Key Features
+ “SautiCare focuses on four unique features:
+1.	Multilingual support Basically English, Pidgin, Hausa.
+2.	Empathetic conversations
+3.	Crisis detection by spotting words like suicide or hopeless, and immediately connecting the user to hotlines.
+4.	Resource library and much more
+All of this comes in a calm, mobile-first interface made for youth and displaced communities.”
+
+Why It Matters
+ “These matters deeply.
+Mental health is surrounded by silence and stigma. But when someone opens SautiCare, they enter a safe, anonymous space to express themselves without fear.
+By including local languages, we’re breaking barriers of exclusion.
+And because it’s AI-powered and scalable, one chatbot can grow into millions of conversations — each one helping someone feel a little less alone.”
+
+Progress & Goals
+ “In terms of progress, here’s where we are:
+•	We’ve built a cross-functional team combining AI, design, and engineering.
+•	We’ve finalized our idea and mapped the system architecture.
+•	We’ve already started prototypes and chatbot conversation flows.
+By the end of this hackathon, our goal is to deliver a working prototype that demonstrates:
+•	Multilingual conversations.
+•	Crisis detection with hotline referral.
+•	And a calming, mobile-friendly UI.
+We don’t just want to show a concept, we want you to experience what it feels like to have a caring voice available anytime.”
+
+Tech Stack
+Speaker:
+“On the technical side, SautiCare is built to be lightweight but scalable.
+•	Frontend: React/Next.js with TailwindCSS.
+•	Backend: Node.js/Express with secure APIs.
+•	AI/ML: Rasa or HuggingFace NLP for multilingual understanding.
+•	Database: Postgres or MongoDB.
+•	Design: Figma prototypes.
+•	Deployment: Cloud hosting on Render or Heroku.
+This stack allows us to move fast during the hackathon while ensuring future scalability.”
+
+Team Introduction
+ “And here’s the team making it happen.
+•	I’m the Frontend Engineer, building a responsive chatbot interface.
+•	Our Backend/DevOps Engineer is handling APIs and deployment.
+•	Our AI/ML Engineer is training the chatbot’s multilingual intelligence.
+•	And our Product Designer is ensuring the experience feels empathetic and user-friendly.
+Together, we bring the right balance of design, engineering, and AI expertise to solve this challenge.”
+
+Closing
+ “To close, I want to emphasize this:
+SautiCare is more than just a project. It’s a caring voice for mental health.
+Built by a team who believes technology can make support accessible, stigma-free, and culturally relevant.
+Because at the end of the day, everyone deserves someone to talk to, and they deserve to be heard in a language they understand.
+Thank you.”

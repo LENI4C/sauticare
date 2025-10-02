@@ -1,0 +1,24 @@
+team-sauticare/frontend/
+├── app/
+│   ├── globals.css          # TailwindCSS + custom styles
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Main page
+├── components/
+│   ├── ChatContainer.tsx    # Main chat interface
+│   ├── ChatWindow.tsx       # Message display
+│   ├── Header.tsx           # App header
+│   ├── InputBox.tsx         # Message input
+│   └── MessageBubble.tsx    # Message component
+├── package.json             # Dependencies
+├── tailwind.config.js       # TailwindCSS config
+├── tsconfig.json           # TypeScript config
+├── next.config.js          # Next.js config
+├── postcss.config.js       # PostCSS config
+├── .eslintrc.json         # ESLint config
+├── .gitignore            # Git ignore rules
+└── README.md             # Documentation
+
+###################################################
+- Customize responses in ChatContainer.tsx for your specific use case
+- Connect to AI API by replacing the placeholder getBotResponse function
+- Add voice recording by implementing the voice functionality in InputBox.tsx
