@@ -2,45 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @layer base {
     html {
         font-family: "Inter", system-ui, sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
-        @apply bg-gradient-to-br from-primary-50 to-secondary-50 min-h-screen;
+        @apply bg-gradient-to-br from-primary-50 via-white to-calm-50 min-h-screen text-secondary-800;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    /* Dark mode styles */
+    .dark body {
+        @apply bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-secondary-100;
+    }
+
+    /* Selection styles */
+    ::selection {
+        @apply bg-primary-200 text-primary-900;
+    }
+
+    .dark ::selection {
+        @apply bg-primary-800 text-primary-100;
     }
 }
 
 @layer components {
+    /* Chat Container */
     .chat-container {
-        @apply bg-white rounded-2xl shadow-xl border border-secondary-200;
+        @apply bg-white/80 backdrop-blur-sm rounded-3xl shadow-soft-lg border border-secondary-200/50;
+        backdrop-filter: blur(10px);
     }
 
+    .dark .chat-container {
+        @apply bg-secondary-800/80 border-secondary-700/50;
+    }
+
+    /* Message Bubbles */
     .message-bubble {
-        @apply max-w-xs lg:max-w-md px-4 py-3 rounded-2xl text-sm leading-relaxed;
+        @apply max-w-xs lg:max-w-md px-4 py-3 rounded-2xl text-sm leading-relaxed shadow-soft;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .message-user {
-        @apply bg-primary-500 text-white ml-auto;
+        @apply bg-gradient-to-br from-primary-500 to-primary-600 text-white ml-auto shadow-glow;
     }
 
     .message-bot {
-        @apply bg-secondary-100 text-secondary-800 mr-auto;
+        @apply bg-gradient-to-br from-secondary-100 to-secondary-200 text-secondary-800 mr-auto;
     }
 
+    .dark .message-bot {
+        @apply bg-gradient-to-br from-secondary-700 to-secondary-600 text-secondary-100;
+    }
+
+    /* Input Field */
     .input-field {
-        @apply w-full px-4 py-3 border border-secondary-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+        @apply w-full px-4 py-3 border border-secondary-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 bg-white/50 backdrop-blur-sm;
     }
 
+    .dark .input-field {
+        @apply border-secondary-600 bg-secondary-800/50 text-secondary-100 placeholder-secondary-400;
+    }
+
+    /* Buttons */
     .btn-primary {
-        @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+        @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-soft hover:shadow-glow;
     }
 
     .btn-secondary {
-        @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-700 px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+        @apply bg-gradient-to-r from-secondary-100 to-secondary-200 hover:from-secondary-200 hover:to-secondary-300 text-secondary-700 px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 shadow-soft;
+    }
+
+    .dark .btn-secondary {
+        @apply from-secondary-700 to-secondary-600 hover:from-secondary-600 hover:to-secondary-500 text-secondary-100;
+    }
+
+    /* Crisis Alert */
+    .crisis-alert {
+        @apply p-4 rounded-2xl mb-4 border-2 shadow-soft-lg backdrop-blur-sm;
+    }
+
+    .crisis-critical {
+        @apply bg-gradient-to-r from-danger-50 to-red-50 border-danger-500;
+    }
+
+    .dark .crisis-critical {
+        @apply from-danger-900/20 to-red-900/20 border-danger-400;
+    }
+
+    .crisis-warning {
+        @apply bg-gradient-to-r from-warning-50 to-orange-50 border-warning-500;
+    }
+
+    .dark .crisis-warning {
+        @apply from-warning-900/20 to-orange-900/20 border-warning-400;
+    }
+
+    /* Mood Indicator */
+    .mood-indicator {
+        @apply w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-soft transition-all duration-300 hover:scale-110;
+    }
+
+    /* Quick Action Button */
+    .quick-action {
+        @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 active:scale-95 shadow-soft;
+    }
+
+    /* Resource Card */
+    .resource-card {
+        @apply p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-secondary-200/50 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1;
+    }
+
+    .dark .resource-card {
+        @apply bg-secondary-800/60 border-secondary-700/50;
+    }
+
+    /* Loading States */
+    .loading-skeleton {
+        @apply animate-pulse bg-gradient-to-r from-secondary-200 via-secondary-300 to-secondary-200 rounded;
+    }
+
+    .dark .loading-skeleton {
+        @apply from-secondary-700 via-secondary-600 to-secondary-700;
     }
 }
 
@@ -54,12 +142,19 @@
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 3px;
+    @apply bg-secondary-300 rounded-full;
 }
 
 .chat-messages::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    @apply bg-secondary-400;
+}
+
+.dark .chat-messages::-webkit-scrollbar-thumb {
+    @apply bg-secondary-600;
+}
+
+.dark .chat-messages::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary-500;
 }
 
 /* Smooth animations */
@@ -71,4 +166,59 @@
 .focus-visible:focus {
     outline: 2px solid #0ea5e9;
     outline-offset: 2px;
+}
+
+/* Custom animations */
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .message-bubble {
+        @apply border border-current;
+    }
+
+    .btn-primary {
+        @apply border-2 border-primary-700;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        @apply bg-white text-black;
+    }
 }
